@@ -12,7 +12,7 @@ import json
 import os
 
 # 读取 config.json 配置
-with open('config.json', 'r', encoding='utf-8') as f:
+with open('./newest-arxiv-to-youremail/config.json', 'r', encoding='utf-8') as f:
     config = json.load(f)
 
 # 邮箱配置
