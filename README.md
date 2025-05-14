@@ -45,7 +45,15 @@ python arxiv_daily_report.py
 ```
 📅 配置定时任务（Linux crontab 示例）
 ```bash
+crontab -e
+```
+每天运行一次：
+```bash
 0 9 * * * /usr/bin/python3 /你的路径/arxiv_daily_report.py
+```
+三天一次
+```bash
+0 9 */3 * * /home/share/HDstorage/xyc/envs/mamba/bin/python /home/share/HDstorage/xyc/code/newest-arxiv-to-youremail/daily_paper_report.py >> /home/share/HDstorage/xyc/code/newest-arxiv-to-youremail/cron.log 2>&1
 ```
 查看定时任务：
 ```bash
