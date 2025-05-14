@@ -37,9 +37,15 @@ def search_arxiv():
         query_url = rss_url.format(quote(keyword))
         feed = feedparser.parse(query_url)
         for entry in feed.entries:
-            paper = f"标题: {entry.title}\n链接: {entry.link}\n摘要: {entry.summary}\n"
-            result_list.append(paper)
+            link = entry.link
+            
+            result_list.append({
+                "title": entry.title,
+                "link": link,
+                "summary": entry.summary
+            })
     return result_list
+
 
 def check_paperswithcode(paper_title):
     url = f"https://paperswithcode.com/api/v1/papers/?q={paper_title}"
@@ -123,9 +129,10 @@ if __name__ == "__main__":
         <hr>
         """
         for paper in papers:
-            title = paper.split("\n")[0].replace("标题: ", "")
-            link = paper.split("\n")[1].replace("链接: ", "")
-            summary_en = paper.split("摘要: ")[1].strip()
+            title = paper['title']
+            link = paper['link']
+            summary_en = paper['summary']
+            
 
             # 翻译摘要
             summary_zh = translate_summary(summary_en)
