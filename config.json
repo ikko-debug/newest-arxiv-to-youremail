@@ -1,13 +1,12 @@
 {
-  //邮箱
   "smtp_server": "smtp.qq.com",
   "smtp_port": 587,
   "sender_email": "@qq.com",
   "sender_password": "",
   "receiver_email": "@qq.com",
-  //百度云翻译
+  
   "appid": "",
   "secret_key": ""
-  "keywords": ["Mamba", "State Space Model", "SSM"], //关键词
-  "rss_url": "http://export.arxiv.org/api/query?search_query=all:{}&start=0&max_results=10&sortBy=lastUpdatedDate"  //查询最新的十篇
+  "keywords": ["Mamba", "State Space Model", "SSM"], 
+  "rss_url": "http://export.arxiv.org/api/query?search_query=all:{}&start=0&max_results=10&sortBy=lastUpdatedDate"  
 }
