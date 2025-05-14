@@ -16,17 +16,25 @@ keywords = ["Mamba", "State Space Model", "SSM"]
 # arXiv RSS 源
 rss_url = "http://export.arxiv.org/api/query?search_query=all:{}&start=0&max_results=10&sortBy=lastUpdatedDate"
 
-# 邮箱配置（请在 config.json 或环境变量中安全存放这些信息）
-smtp_server = 'smtp.yourmail.com'
-smtp_port = 587
-sender_email = 'your_email@example.com'
-sender_password = 'your_smtp_password'
-receiver_email = 'receiver_email@example.com'
+import json
+import os
 
-# 百度翻译配置（请在 config.json 或环境变量中安全存放这些信息）
-appid = 'your_appid'
-secret_key = 'your_secret_key'
+# 读取 config.json 配置
+with open('config.json', 'r', encoding='utf-8') as f:
+    config = json.load(f)
+
+# 邮箱配置
+smtp_server = config['smtp_server']
+smtp_port = config['smtp_port']
+sender_email = config['sender_email']
+sender_password = config['sender_password']
+receiver_email = config['receiver_email']
+
+# 百度翻译配置
+appid = config['appid']
+secret_key = config['secret_key']
 api_url = 'http://api.fanyi.baidu.com/api/trans/vip/translate'
+
 
 def search_arxiv():
     result_list = []
