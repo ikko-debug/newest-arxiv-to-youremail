@@ -1,0 +1,11 @@
+{
+  //邮箱
+  "smtp_server": "smtp.qq.com",
+  "smtp_port": 587,
+  "sender_email": "@qq.com",
+  "sender_password": "",
+  "receiver_email": "@qq.com",
+  //百度云翻译
+  "appid": "",
+  "secret_key": ""
+}
