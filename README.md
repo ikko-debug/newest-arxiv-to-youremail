@@ -53,7 +53,7 @@ crontab -e
 ```
 三天一次
 ```bash
-0 9 */3 * * /home/share/HDstorage/xyc/envs/mamba/bin/python /home/share/HDstorage/xyc/code/newest-arxiv-to-youremail/daily_paper_report.py >> /home/share/HDstorage/xyc/code/newest-arxiv-to-youremail/cron.log 2>&1
+0 9 */3 * * python环境 /你的路径/arxiv_daily_report.py >> /home/share/HDstorage/xyc/code/newest-arxiv-to-youremail/cron.log 2>&1
 ```
 查看定时任务：
 ```bash
