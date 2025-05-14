@@ -9,14 +9,6 @@ from urllib.parse import quote
 import hashlib
 import random
 import json
-
-# 设置关键词
-keywords = ["Mamba", "State Space Model", "SSM"]
-
-# arXiv RSS 源
-rss_url = "http://export.arxiv.org/api/query?search_query=all:{}&start=0&max_results=10&sortBy=lastUpdatedDate"
-
-import json
 import os
 
 # 读取 config.json 配置
@@ -35,6 +27,9 @@ appid = config['appid']
 secret_key = config['secret_key']
 api_url = 'http://api.fanyi.baidu.com/api/trans/vip/translate'
 
+# 获取关键词和RSS源
+keywords = config['keywords']
+rss_url = config['rss_url']
 
 def search_arxiv():
     result_list = []
