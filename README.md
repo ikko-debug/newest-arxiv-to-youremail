@@ -16,10 +16,10 @@
 ---
 
 ## 📦 项目目录结构
-├── config.json # 邮箱与 API 配置（可选） 
-├── daily_paper_report.py # 主程序  
-├── requirements.txt # 依赖库  
-└── README.md # 项目说明文档  
+├── config.json # 邮箱与 API 配置（可选） <br>
+├── daily_paper_report.py # 主程序  <br>
+├── requirements.txt # 依赖库  <br>
+└── README.md # 项目说明文档  <br>
 
 ---
 
